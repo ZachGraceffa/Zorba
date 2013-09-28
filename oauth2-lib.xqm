@@ -8,7 +8,7 @@ xquery version "3.0";
  : 
  : The general flow of use for this module is as follows:
  : -Create a Service-Provider instance
- : -Add any additional parameters and/or headers as needed
+ : -Add any additional parameters and/or headers as needed using the parameters function
  : -Store the Service-Provider instance and any other data as needed through the store-data function.
  : -Redirect the user by calling the authorization-grant function
  :      -It is recommended to pass the location of the stored resources through the "state" parameter
@@ -17,6 +17,12 @@ xquery version "3.0";
  : -Use retrieved data to obtain an access token using the "access-token" function
  : -Parse out the access token and use it to obtain the protected resource using the "protected-resource function"
  :) 
+
+(:
+ : @author Zach Graceffa
+ : zachgraceffa@gmail.com
+ : I am open to any criticisms or contributions :-)
+:)
 
 module namespace oauth2 = "http://www.zachgraceffa.com/modules/oauth2/client";
 
